@@ -1,0 +1,204 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0C0E30;
+    color: #FFFFFF;
+}
+
+/* Sección de Encabezado */
+.header {
+    text-align: center;
+    text-shadow: #0C0E30;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra con transparencia */
+    padding: 40px 20px;
+    background-image: url('/img/fondo-educacion.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.header h2 {
+    font-size: 18px;
+    color: #FDC700;
+    margin-top: 10px;
+}
+
+/* Sección de CTA */
+.cta-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.cta-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #00FF66;
+    color: #0C0E30;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-note {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Sección del Taller */
+.taller-section {
+    padding: 30px 20px;
+}
+
+.taller-section h2 {
+    font-size: 22px;
+    color: #FDC700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.taller-section h3 {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Acordeón */
+.accordion .accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    width: 100%;
+    background-color: #4B41FF;
+    color: #FFFFFF;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.accordion-content {
+    background-color: #FFFFFF;
+    color: #0C0E30;
+    padding: 15px;
+    display: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Sección de Testimonios */
+.testimonios-section {
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+    color: #0C0E30;
+}
+
+.testimonios-section h2 {
+    font-size: 22px;
+    color: #0C0E30;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonio {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.testimonio img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonio p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Sección del Instructor */
+.instructor-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.instructor-section h2 {
+    font-size: 22px;
+    color: #FDC700;
+    margin-bottom: 20px;
+}
+
+.instructor-section img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.instructor-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Sección de Urgencia */
+.urgencia-section {
+    padding: 20px;
+    background-color: #FDC700;
+    color: #0C0E30;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sección CTA Final */
+.cta-final-section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.cta-final-section .cta-button {
+    background-color: #00FF66;
+    color: #0C0E30;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-final-section .motivational-text {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+    .testimonios {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .testimonio {
+        margin: 0 10px;
+    }
+}
