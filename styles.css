@@ -6,15 +6,29 @@ body {
     color: #FFFFFF;
 }
 
+/* Notificación de prueba social */
+.social-proof {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(253, 199, 0, 0.9);
+    color: #0C0E30;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
 /* Sección de Encabezado */
 .header {
     text-align: center;
-    text-shadow: #0C0E30;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra negra con transparencia */
     padding: 40px 20px;
-    background-image: url('/img/fondo-educacion.jpg');
+    background-image: url('img/fondo-educacion.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header h1 {
@@ -48,6 +62,18 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Animación en dispositivos táctiles */
+@media (hover: none) {
+    .cta-button:active {
+        transform: scale(1.05);
+    }
 }
 
 .cta-note {
@@ -89,6 +115,15 @@ body {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+.accordion-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 .accordion-content {
@@ -100,16 +135,23 @@ body {
     margin-top: 5px;
 }
 
+.accordion-button.active {
+    background-color: #00FF66;
+    color: #0C0E30;
+}
+
 /* Sección de Testimonios */
 .testimonios-section {
     padding: 30px 20px;
-    background-color: #FFFFFF;
-    color: #0C0E30;
+    background-image: url('img/fondo-testimonios.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
 }
 
 .testimonios-section h2 {
     font-size: 22px;
-    color: #0C0E30;
+    color: #FFFFFF;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -131,11 +173,19 @@ body {
     height: 80px;
     border-radius: 50%;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .testimonio p {
     font-size: 16px;
     font-style: italic;
+    color: #FFFFFF;
+}
+
+.testimonio h4 {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #FFFFFF;
 }
 
 /* Sección del Instructor */
@@ -155,11 +205,17 @@ body {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .instructor-section p {
     font-size: 16px;
     margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.instructor-section p strong {
+    color: #FDC700;
 }
 
 /* Sección de Urgencia */
@@ -169,12 +225,30 @@ body {
     color: #0C0E30;
     text-align: center;
     font-size: 16px;
+    position: relative;
+}
+
+.icono-urgencia {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#countdown {
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* Sección CTA Final */
 .cta-final-section {
     padding: 30px 20px;
     text-align: center;
+}
+
+.cta-final-section img {
+    display: none; /* Ocultamos la imagen */
 }
 
 .cta-final-section .cta-button {
@@ -184,11 +258,28 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.cta-final-section .cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Animación en dispositivos táctiles */
+@media (hover: none) {
+    .cta-final-section .cta-button:active {
+        transform: scale(1.05);
+    }
 }
 
 .cta-final-section .motivational-text {
     font-size: 16px;
     margin-top: 20px;
+    color: #FFFFFF;
+}
+
+.cta-final-section .motivational-text strong {
+    color: #FDC700;
 }
 
 /* Responsive */
