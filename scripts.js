@@ -1,56 +1,71 @@
-// Código para el acordeón de la sección de temas
-const accordionButtons = document.querySelectorAll('.accordion-button');
+// scripts.js
 
-accordionButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Obtener el contenido asociado
-        const accordionContent = button.nextElementSibling;
+// Configuración de la fecha y hora de finalización del contador
+const countdownEndTime = '2024-10-14T12:00:00'; // <-- Configura la fecha y hora de finalización
 
-        // Alternar la clase 'active' en el botón
-        button.classList.toggle('active');
+// Función para el contador regresivo
+function countdownTimer(elementId, endTime) {
+    // Obtener el elemento del contador por su ID
+    const countdownElement = document.getElementById(elementId);
+    if (!countdownElement) return; // Si el elemento no existe, salir de la función
 
-        // Mostrar u ocultar el contenido
-        if (accordionContent.style.display === 'block') {
-            accordionContent.style.display = 'none';
-        } else {
-            accordionContent.style.display = 'block';
+    // Seleccionar los elementos de los números dentro del contador usando clases
+    const daysElement = countdownElement.querySelector('.days');
+    const hoursElement = countdownElement.querySelector('.hours');
+    const minutesElement = countdownElement.querySelector('.minutes');
+    const secondsElement = countdownElement.querySelector('.seconds');
+
+    // Verificar que todos los elementos existen
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement) return;
+
+    // Función que actualiza el contador cada segundo
+    let x = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = endTime - now;
+
+        if (distance < 0) {
+            clearInterval(x);
+            // Establecer los valores a cero si el tiempo se ha agotado
+            daysElement.textContent = '00';
+            hoursElement.textContent = '00';
+            minutesElement.textContent = '00';
+            secondsElement.textContent = '00';
+            return;
         }
-    });
-});
 
-// Código para el contador regresivo visual
-function startCountdown(duration, display) {
-    let timer = duration, hours, minutes, seconds;
+        // Cálculos de tiempo
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    setInterval(() => {
-        hours = parseInt(timer / 3600, 10);
-        minutes = parseInt((timer % 3600) / 60, 10);
-        seconds = parseInt(timer % 60, 10);
-
-        hours = hours < 10 ? hours : hours;
+        // Formatear los números para que siempre tengan dos dígitos
+        days = days < 10 ? '0' + days : days;
+        hours = hours < 10 ? '0' + hours : hours;
         minutes = minutes < 10 ? '0' + minutes : minutes;
         seconds = seconds < 10 ? '0' + seconds : seconds;
 
-        display.textContent = `${hours}h ${minutes}m ${seconds}s`;
+        // Actualizar los valores en el contador
+        daysElement.textContent = days;
+        hoursElement.textContent = hours;
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
 
-        if (--timer < 0) {
-            timer = 0;
-            display.textContent = "Tiempo agotado";
-        }
     }, 1000);
 }
 
-window.onload = () => {
-    // Iniciar el contador regresivo de menos de 24 horas
-    const countdownDuration = 23 * 60 * 60 + 59 * 60 + 59; // Menos de 24 horas en segundos
-    const display = document.getElementById('countdown');
-    startCountdown(countdownDuration, display);
+// Inicializar el contador
+function initCountdown() {
+    // Convertir la fecha de finalización a milisegundos
+    const endTime = new Date(countdownEndTime).getTime();
 
-    // Mostrar notificación de prueba social después de cargar la página
-    setTimeout(() => {
-        showSocialProof();
-    }, Math.floor(Math.random() * 5000) + 5000); // Entre 2 y 7 segundos
-};
+    // Inicializar el contador por su ID
+    countdownTimer('countdown', endTime);
+}
 
 // Código para la notificación de prueba social
 function showSocialProof() {
@@ -58,13 +73,15 @@ function showSocialProof() {
     const surnames = ['G.', 'R.', 'M.', 'P.', 'L.', 'S.', 'T.', 'D.', 'V.', 'H.'];
     const countries = ['Argentina', 'Colombia', 'México', 'Chile', 'Perú', 'Ecuador', 'Uruguay', 'Paraguay', 'Bolivia', 'Costa Rica'];
 
-    const randomName = names[Math.floor(Math.random() * names.length)] + ' ' + surnames[Math.floor(Math.random() * surnames.length)];
+    const randomFirstName = names[Math.floor(Math.random() * names.length)];
+    const randomSurnameInitial = surnames[Math.floor(Math.random() * surnames.length)];
     const randomCountry = countries[Math.floor(Math.random() * countries.length)];
 
-    const message = `${randomName} de ${randomCountry} se sumó a la clase gratis`;
+    const boldName = `<strong>${randomFirstName} ${randomSurnameInitial}</strong>`;
+    const message = `${boldName} de ${randomCountry} se sumó a la clase gratis`;
 
     const socialProof = document.getElementById('social-proof');
-    socialProof.textContent = message;
+    socialProof.innerHTML = message;
     socialProof.style.display = 'block';
 
     // Ocultar después de 5-10 segundos
@@ -72,3 +89,23 @@ function showSocialProof() {
         socialProof.style.display = 'none';
     }, Math.floor(Math.random() * 5000) + 5000); // Entre 5 y 10 segundos
 }
+
+// Función para programar las notificaciones de prueba social
+function scheduleSocialProof() {
+    // Mostrar notificación
+    showSocialProof();
+
+    // Programar la siguiente notificación
+    const nextInterval = Math.floor(Math.random() * 20000) + 10000; // Entre 10 y 30 segundos
+    setTimeout(scheduleSocialProof, nextInterval);
+}
+
+// Inicializar todo al cargar la página
+window.onload = () => {
+    // Iniciar el contador regresivo
+    initCountdown();
+
+    // Programar la primera notificación entre 10 y 30 segundos
+    const firstInterval = Math.floor(Math.random() * 20000) + 10000; // Entre 10 y 30 segundos
+    setTimeout(scheduleSocialProof, firstInterval);
+};
