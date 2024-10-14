@@ -1,7 +1,37 @@
 // scripts.js
 
-// Configuración de la fecha y hora de finalización del contador
-const countdownEndTime = '2024-10-14T12:00:00'; // <-- Configura la fecha y hora de finalización
+// Opción para usar configuración manual o automática
+const useManualCountdown = false; // Cambia a 'true' para configurar manualmente
+
+// Configuración de la fecha y hora de finalización del contador (solo si 'useManualCountdown' es true)
+const manualCountdownEndTime = '2024-10-14T12:00:00'; // <-- Configura la fecha y hora de finalización manual
+
+// Función para generar un tiempo aleatorio entre 15h 07m 30s y 21h 24m 30s
+function getRandomCountdownTime() {
+    // Tiempo actual
+    const now = new Date().getTime();
+
+    // Tiempo mínimo y máximo en milisegundos
+    const minTime = (15 * 3600 + 7 * 60 + 30) * 1000; // 15 horas, 7 minutos, 30 segundos
+    const maxTime = (21 * 3600 + 24 * 60 + 30) * 1000; // 21 horas, 24 minutos, 30 segundos
+
+    // Generar un tiempo aleatorio entre minTime y maxTime
+    const randomTime = Math.floor(Math.random() * (maxTime - minTime + 1)) + minTime;
+
+    // Calcular la fecha y hora de finalización
+    const endTime = new Date(now + randomTime);
+
+    return endTime;
+}
+
+// Obtener la fecha y hora de finalización según la configuración
+let countdownEndTime;
+
+if (useManualCountdown) {
+    countdownEndTime = new Date(manualCountdownEndTime).getTime();
+} else {
+    countdownEndTime = getRandomCountdownTime().getTime();
+}
 
 // Función para el contador regresivo
 function countdownTimer(elementId, endTime) {
@@ -60,14 +90,11 @@ function countdownTimer(elementId, endTime) {
 
 // Inicializar el contador
 function initCountdown() {
-    // Convertir la fecha de finalización a milisegundos
-    const endTime = new Date(countdownEndTime).getTime();
-
     // Inicializar el contador por su ID
-    countdownTimer('countdown', endTime);
+    countdownTimer('countdown', countdownEndTime);
 }
 
-// Código para la notificación de prueba social
+// Código para la notificación de prueba social (permanece igual)
 function showSocialProof() {
     const names = ['María', 'Carlos', 'Ana', 'Luis', 'Sofía', 'Jorge', 'Lucía', 'Miguel', 'Noelia', 'Pedro'];
     const surnames = ['G.', 'R.', 'M.', 'P.', 'L.', 'S.', 'T.', 'D.', 'V.', 'H.'];

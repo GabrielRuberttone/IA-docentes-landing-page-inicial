@@ -29,14 +29,16 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+
 }
 
 .header h1 {
     font-size: 28px;
     font-weight: bold;
     color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    -webkit-text-stroke: 0.5px black;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+    -webkit-text-stroke: 0.9px black;
 }
 
 .header h2 {
@@ -129,7 +131,7 @@ body {
 /* Sección del Taller */
 .taller-section {
     padding: 50px 20px;
-    background: linear-gradient(180deg, #1D2671 0%, #C33764 100%);
+    background: linear-gradient(180deg, #1d4fd85f 0%, #1d4fd8 100%);
     color: #FFFFFF;
 }
 
@@ -147,43 +149,53 @@ body {
     margin-bottom: 40px;
 }
 
+/* Estilos actualizados para la sección "Grilla de Temas" */
+
 /* Grilla de Temas */
 .temas-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px; /* Reduce el espacio entre tarjetas */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .tema-card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #FFFFFF; /* Fondo blanco para las tarjetas */
     border-radius: 15px;
-    padding: 30px 20px;
+    padding: 20px 15px; /* Reduce el padding interno de las tarjetas */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado externo e interno constante */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tema-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), inset 0 4px 6px rgba(0, 0, 0, 0.1); /* Solo aumenta el sombreado externo en hover */
 }
 
 .tema-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
+    width: 60px; /* Reduce el tamaño del ícono */
+    height: 60px;
+    margin-bottom: 10px; /* Reduce el espacio inferior del ícono */
 }
 
 .tema-card h4 {
-    font-size: 20px;
-    color: #FFFFFF;
-    margin-bottom: 15px;
+    font-size: 20px; /* Ajusta el tamaño del título */
+    color: #1D4ED8; /* Color azul para los títulos */
+    margin-bottom: 10px; /* Reduce el espacio inferior del título */
 }
 
 .tema-card p {
-    font-size: 16px;
-    color: #E0E0E0;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-weight: 500; /* Hace el texto un poco más grueso */
+    color: #4A4A4A; /* Texto en gris oscuro */
+    margin-bottom: 5px; /* Reduce el margen inferior del párrafo */
+}
+
+.tema-card h4,
+.tema-card p {
+    padding: 0 5px; /* Reduce el padding lateral */
 }
 
 /* Responsividad */
@@ -192,6 +204,7 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 
 /* Sección de Testimonios */
 .testimonios-section {
@@ -292,8 +305,9 @@ body {
 .instructor-section {
     padding: 30px 20px;
     text-align: center;
+    background: linear-gradient(180deg, #1d4fd8 0%, #1d4fd85e 100%);
+ /* Reemplaza #color1 y #color2 por los colores que desees */
 }
-
 .instructor-section h2 {
     font-size: 22px;
     color: #FDC700;
@@ -430,6 +444,8 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
+/* Estilos actualizados para el segundo CTA */
+
 /* Sección CTA Final */
 .cta-final-section {
     padding: 30px 20px;
@@ -444,10 +460,28 @@ body {
     font-weight: bold;
     border-radius: 5px;
     transition: transform 0.2s ease;
+    display: inline-block;
 }
 
 .cta-final-section .cta-button:hover {
     transform: scale(1.05);
+}
+
+/* Añadimos una animación de pulso */
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .cta-final-section .motivational-text {
