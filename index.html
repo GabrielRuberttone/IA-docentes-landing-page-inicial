@@ -1,149 +1,264 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Transforma tu enseñanza con IA</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!-- Fuente Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "7328616397254046");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        src="https://www.facebook.com/tr?id=7328616397254046&ev=PageView
+    &noscript=1"
+      />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
     <!-- Notificación de prueba social -->
     <div id="social-proof" class="social-proof"></div>
 
     <!-- Sección 1: Encabezado -->
     <header class="header">
-        <h1>¡Transforma tu enseñanza con Inteligencia Artificial!</h1>
-        <h2>Descubre cómo la IA puede revolucionar tu manera de enseñar en solo 1 clase gratuita.</h2>
+      <h1>¡Transforma tu enseñanza con Inteligencia Artificial!</h1>
+      <h2>
+        Descubre cómo la IA puede revolucionar tu manera de enseñar en solo 1
+        clase gratuita.
+      </h2>
     </header>
 
     <!-- Sección 2: Promesa y CTA -->
     <section class="cta-section">
-        <p>Únete a nuestra <strong>CLASE EN VIVO GRATUITA</strong> y aprende cómo aplicar la IA para captar la atención de tus alumnos y revolucionar tu enseñanza.</p>
-        <a href="https://chat.whatsapp.com/FisrRUf8ryl7h1vsGAG5FJ" class="cta-button">Quiero acceder a la clase GRATIS</a>
-        <p class="cta-note">Recibe los detalles completos en nuestro grupo de WhatsApp exclusivo.</p>
+      <p>
+        Únete a nuestra <strong>CLASE EN VIVO GRATUITA</strong> y aprende cómo
+        aplicar la IA para captar la atención de tus alumnos y revolucionar tu
+        enseñanza.
+      </p>
+      <a
+        href="https://chat.whatsapp.com/FisrRUf8ryl7h1vsGAG5FJ"
+        class="cta-button"
+        onclick="fbq('track', 'Ingreso_a_WS')"
+        >Quiero acceder a la clase GRATIS</a
+      >
+      <p class="cta-note">
+        Recibe los detalles completos en nuestro grupo de WhatsApp exclusivo.
+      </p>
     </section>
 
-   <!-- Sección 3: ¿Qué aprenderás en esta clase gratuita? -->
-<section class="taller-section">
-    <h2>¿Qué aprenderás en esta clase gratuita?</h2>
-    <h3>Temas clave del webinar</h3>
+    <!-- Sección 3: ¿Qué aprenderás en esta clase gratuita? -->
+    <section class="taller-section">
+      <h2>¿Qué aprenderás en esta clase gratuita?</h2>
+      <h3>Temas clave del webinar</h3>
 
-    <!-- Grilla de Temas -->
-    <div class="temas-grid">
+      <!-- Grilla de Temas -->
+      <div class="temas-grid">
         <div class="tema-card">
-            <img src="img/icono-herramientas-creativas.svg" alt="Herramientas Creativas" class="tema-icon">
-            <h4>Herramientas Creativas para Docentes con IA</h4>
-            <p>Descubre cómo la IA puede transformar tus espacios académicos, haciendo que la enseñanza sea más dinámica y efectiva.</p>
+          <img
+            src="img/icono-herramientas-creativas.svg"
+            alt="Herramientas Creativas"
+            class="tema-icon"
+          />
+          <h4>Herramientas Creativas para Docentes con IA</h4>
+          <p>
+            Descubre cómo la IA puede transformar tus espacios académicos,
+            haciendo que la enseñanza sea más dinámica y efectiva.
+          </p>
         </div>
 
         <div class="tema-card">
-            <img src="img/icono-ia-generativa.svg" alt="IA Generativa" class="tema-icon">
-            <h4>Inteligencia Artificial Generativa</h4>
-            <p>Aprende sobre la IA generativa y cómo puede ayudarte a crear contenido único y atractivo en tus clases.</p>
+          <img
+            src="img/icono-ia-generativa.svg"
+            alt="IA Generativa"
+            class="tema-icon"
+          />
+          <h4>Inteligencia Artificial Generativa</h4>
+          <p>
+            Aprende sobre la IA generativa y cómo puede ayudarte a crear
+            contenido único y atractivo en tus clases.
+          </p>
         </div>
 
         <div class="tema-card">
-            <img src="img/icono-optimizacion-ia.svg" alt="Optimización con IA" class="tema-icon">
-            <h4>Optimización y Eficiencia en el Uso de IA</h4>
-            <p>Veremos cómo la IA puede agilizar tareas como la documentación, la organización de clases y la evaluación.</p>
+          <img
+            src="img/icono-optimizacion-ia.svg"
+            alt="Optimización con IA"
+            class="tema-icon"
+          />
+          <h4>Optimización y Eficiencia en el Uso de IA</h4>
+          <p>
+            Veremos cómo la IA puede agilizar tareas como la documentación, la
+            organización de clases y la evaluación.
+          </p>
         </div>
 
         <div class="tema-card">
-            <img src="img/icono-etica-seguridad-ia.svg" alt="Ética y Seguridad" class="tema-icon">
-            <h4>Ética y Seguridad en el Uso de IA</h4>
-            <p>Hablaremos sobre los riesgos éticos relacionados con la IA, incluyendo la clonación de voces y la seguridad en el aula.</p>
+          <img
+            src="img/icono-etica-seguridad-ia.svg"
+            alt="Ética y Seguridad"
+            class="tema-icon"
+          />
+          <h4>Ética y Seguridad en el Uso de IA</h4>
+          <p>
+            Hablaremos sobre los riesgos éticos relacionados con la IA,
+            incluyendo la clonación de voces y la seguridad en el aula.
+          </p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <!-- Sección 4: Testimonios -->
     <section class="testimonios-section">
-        <h2>Esto es lo que opinan quienes ya asistieron a la clase</h2>
+      <h2>Esto es lo que opinan quienes ya asistieron a la clase</h2>
 
-        <div class="testimonios">
-
-            <div class="testimonio">
-                <img src="img/testimonio-mujer1.jpg" alt="María G.">
-                <p>"Me sentía abrumada por la tecnología, pero después de esta clase, sé que es posible que mis lecciones sean más atractivas y mis alumnos estén más motivados."</p>
-                <h4>María G.</h4>
-            </div>
-
-            <div class="testimonio">
-                <img src="img/testimonio-hombre.jpg" alt="Carlos R.">
-                <p>"Nunca pensé que podría integrar la IA en mis clases tan fácilmente. Esta clase en vivo me dio la confianza que necesitaba."</p>
-                <h4>Carlos R.</h4>
-            </div>
-
-            <div class="testimonio">
-                <img src="img/testimonio-mujer2.jpg" alt="Lucía M.">
-                <p>"Después de esta clase, me di cuenta de que puedo integrar la IA en mis clases. Si aplico lo aprendido, sé que puedo transformar la forma en que enseño."</p>
-                <h4>Lucía M.</h4>
-            </div>
-
+      <div class="testimonios">
+        <div class="testimonio">
+          <img src="img/testimonio-mujer1.jpg" alt="María G." />
+          <p>
+            "Me sentía abrumada por la tecnología, pero después de esta clase,
+            sé que es posible que mis lecciones sean más atractivas y mis
+            alumnos estén más motivados."
+          </p>
+          <h4>María G.</h4>
         </div>
+
+        <div class="testimonio">
+          <img src="img/testimonio-hombre.jpg" alt="Carlos R." />
+          <p>
+            "Nunca pensé que podría integrar la IA en mis clases tan fácilmente.
+            Esta clase en vivo me dio la confianza que necesitaba."
+          </p>
+          <h4>Carlos R.</h4>
+        </div>
+
+        <div class="testimonio">
+          <img src="img/testimonio-mujer2.jpg" alt="Lucía M." />
+          <p>
+            "Después de esta clase, me di cuenta de que puedo integrar la IA en
+            mis clases. Si aplico lo aprendido, sé que puedo transformar la
+            forma en que enseño."
+          </p>
+          <h4>Lucía M.</h4>
+        </div>
+      </div>
     </section>
 
     <!-- Sección 5: Datos del Instructor -->
     <section class="instructor-section">
-        <h2>Sobre tu instructor, Helman Carrillo</h2>
-        <img src="img/Helman-Carrillo.jpeg" alt="Helman Carrillo">
-        <p><strong>Economista y Magíster en Intervención Social</strong>, Helman tiene más de <strong>10 años de experiencia en educación e innovación tecnológica</strong>.</p>
-        <p>Ha capacitado a docentes y profesionales para integrar la IA en sus prácticas educativas. En esta clase, te guiará <strong>paso a paso</strong> para que también puedas aprovechar estas herramientas en tu aula.</p>
+      <h2>Sobre tu instructor, Helman Carrillo</h2>
+      <img src="img/Helman-Carrillo.jpeg" alt="Helman Carrillo" />
+      <p>
+        <strong>Economista y Magíster en Intervención Social</strong>, Helman
+        tiene más de
+        <strong
+          >10 años de experiencia en educación e innovación tecnológica</strong
+        >.
+      </p>
+      <p>
+        Ha capacitado a docentes y profesionales para integrar la IA en sus
+        prácticas educativas. En esta clase, te guiará
+        <strong>paso a paso</strong> para que también puedas aprovechar estas
+        herramientas en tu aula.
+      </p>
     </section>
 
     <!-- Sección 6: Urgencia y Escasez -->
     <section class="urgencia-section">
-        <!-- <img src="img/icono-urgencia.svg" alt="Reloj de arena" class="icono-urgencia"> -->
-        <p><strong>Por tiempo limitado:</strong> Regístrate en las próximas:</p>
-        <!-- Contador regresivo actualizado -->
-        <div id="countdown" class="countdown">
-            <div class="countdown-item">
-                <div class="number days">00</div>
-                <div class="label">Días</div>
-            </div>
-            <div class="countdown-item">
-                <div class="number hours">00</div>
-                <div class="label">Horas</div>
-            </div>
-            <div class="countdown-item">
-                <div class="number minutes">00</div>
-                <div class="label">Minutos</div>
-            </div>
-            <div class="countdown-item">
-                <div class="number seconds">00</div>
-                <div class="label">Segundos</div>
-            </div>
+      <!-- <img src="img/icono-urgencia.svg" alt="Reloj de arena" class="icono-urgencia"> -->
+      <p><strong>Por tiempo limitado:</strong> Regístrate en las próximas:</p>
+      <!-- Contador regresivo actualizado -->
+      <div id="countdown" class="countdown">
+        <div class="countdown-item">
+          <div class="number days">00</div>
+          <div class="label">Días</div>
         </div>
-        <p>y obtén acceso exclusivo a material adicional de IA, esencial para aprovechar al máximo nuestra primera clase.</p>
-    
+        <div class="countdown-item">
+          <div class="number hours">00</div>
+          <div class="label">Horas</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number minutes">00</div>
+          <div class="label">Minutos</div>
+        </div>
+        <div class="countdown-item">
+          <div class="number seconds">00</div>
+          <div class="label">Segundos</div>
+        </div>
+      </div>
+      <p>
+        y obtén acceso exclusivo a material adicional de IA, esencial para
+        aprovechar al máximo nuestra primera clase.
+      </p>
     </section>
 
-   <!-- Sección 7: Segundo CTA (Final) -->
-<section class="cta-final-section">
-    <a href="https://chat.whatsapp.com/FisrRUf8ryl7h1vsGAG5FJ" class="cta-button pulse-animation">Accede a la clase GRATIS ahora</a>
-    <p class="motivational-text">Este es el primer paso para transformar tu enseñanza y llevar a tus alumnos al siguiente nivel. <strong>No dejes pasar esta oportunidad</strong> para lograr la conexión que siempre has deseado con tus estudiantes, y conviértete en el docente innovador que tanto anhelas ser.</p>
-</section>
+    <!-- Sección 7: Segundo CTA (Final) -->
+    <section class="cta-final-section">
+      <a
+        href="https://chat.whatsapp.com/FisrRUf8ryl7h1vsGAG5FJ"
+        class="cta-button pulse-animation"
+        onclick="fbq('track', 'Ingreso_a_WS')"
+        >Accede a la clase GRATIS ahora</a
+      >
+      <p class="motivational-text">
+        Este es el primer paso para transformar tu enseñanza y llevar a tus
+        alumnos al siguiente nivel.
+        <strong>No dejes pasar esta oportunidad</strong> para lograr la conexión
+        que siempre has deseado con tus estudiantes, y conviértete en el docente
+        innovador que tanto anhelas ser.
+      </p>
+    </section>
 
-      <!-- Sección de Barra de Progreso para Urgencia -->
-      <!-- <section class="progress-section">
+    <!-- Sección de Barra de Progreso para Urgencia -->
+    <!-- <section class="progress-section">
         <p><strong>¡Los cupos se están agotando!</strong></p>
         <div class="progress-bar">
             <div class="progress-fill" style="width: 76%;"></div>
         </div>
         <p><strong>76%</strong> de los cupos ya están reservados. ¡Apúrate y reserva el tuyo ahora!</p>
     </section> -->
-  <!-- Pie de página -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Impulso Digital AI. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Pie de página -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Impulso Digital AI. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
     <!-- Enlace al archivo JavaScript -->
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
