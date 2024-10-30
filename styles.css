@@ -198,6 +198,38 @@ body {
     padding: 0 5px; /* Reduce el padding lateral */
 }
 
+/* Estilos para la lista de temas */
+.temas-lista {
+    font-size: 18px;
+    color: #1D4ED8;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.temas-lista li {
+    margin: 10px 0;
+    padding: 10px 0;
+    border-top: 1px solid #E0E0E0;
+}
+
+.temas-lista li span.dia {
+    color: #FDC700; /* Color gris para el día */
+    font-weight: normal; /* Sin negrita para el día */
+}
+
+.temas-lista li span.tema {
+    color: #ffffff; /* Azul para el tema */
+    font-weight: bold; /* Negrita para el tema */
+}
+
+.temas-lista li:first-child {
+    border-top: none;
+}
+
+
+
 /* Responsividad */
 @media (min-width: 768px) {
     .temas-grid {
