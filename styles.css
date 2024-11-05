@@ -25,29 +25,56 @@ body {
 .header {
     text-align: center;
     padding: 40px 20px;
-    background-image: url('img/fondo-educacion.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.143), rgba(19, 0, 186, 0.752)), url('img/fondo-educacion.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-
 }
 
 .header h1 {
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 38px;
+    font-weight: bolder;
     color: #FFFFFF;
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
     -webkit-text-stroke: 0.9px black;
 }
 
 .header h2 {
-    font-size: 18px;
+    font-size: 21px;
     color: #FDC700;
     margin-top: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    -webkit-text-stroke: 0.5px black;
+    /* -webkit-text-stroke: 0.5px black; */
 }
+
+
+.svg-indicator {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .svg-indicator img {
+    width: 48px; /* Tamaño de 48px */
+    height: 48px;
+    animation: heartbeat 1.5s infinite; /* Animación de palpitación */
+  }
+  
+  /* Animación de palpitación */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.2);
+    }
+    60% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
 
 /* Sección de CTA */
 .cta-section {
@@ -78,35 +105,6 @@ body {
 .cta-note {
     font-size: 14px;
     margin-top: 10px;
-}
-
-/* Sección de Barra de Progreso para Urgencia */
-.progress-section {
-    text-align: center;
-    padding: 20px;
-    background-color: #FDC700;
-    color: #0C0E30;
-}
-
-.progress-section p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.progress-bar {
-    width: 80%;
-    max-width: 400px;
-    height: 20px;
-    background-color: #E0E0E0;
-    border-radius: 10px;
-    margin: 10px auto;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background-color: #00FF66;
-    width: 76%;
 }
 
 /* Sección del Taller */
